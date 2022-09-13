@@ -34,3 +34,10 @@ jobs:
           files: |
             build/*.apk
             vanced-microG.apk
+
+      - name: Send notification to Telegram
+        run: |
+          export TGKEN=${AUTH_TOKEN}
+          bash upload_revanced.sh
+        env:
+          AUTH_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
