@@ -3,11 +3,10 @@
 # Automation script for sending ReVanced Builds to Telegram Channel
 # Copyright (C) Karthik Sreedevan V <taalojarvi@github.com>
 
-export token=$TGKEN
-# export token=DEBUGGING
+export token="$TGKEN"
 BOT_MSG_URL="https://api.telegram.org/bot$token/sendMessage"
 BOT_BUILD_URL="https://api.telegram.org/bot$token/sendDocument"
-CHATID=-1001555492735
+CHATID="-1001555492735"
 CHANNEL_URL="https://github.com/taalojarvi/Revanced_Builder/releases"
 
 ##---------------------------------------------------------##
