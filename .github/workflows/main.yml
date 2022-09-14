@@ -27,6 +27,9 @@ jobs:
       - name: Set current date as env variable
         run: echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
+      - name: Create Magisk module
+        run: ./create_module.sh
+
       - uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
@@ -35,6 +38,7 @@ jobs:
           title: "Release ${{ env.date_now }}"
           files: |
             build/*.apk
+            build/*.zip
             vanced-microG.apk
 
       - name: Send notification to Telegram
