@@ -1,9 +1,10 @@
 #!/bin/bash
 
-git clone https://github.com/Lyceris-chan/revanced-magisk-template -b YouTube
+git clone https://github.com/CDzungx/revanced-magisk-template.git -b main || exit 1
 
-cp build/revanced-root-signed.apk revanced-magisk-template
-cp com.google.android.youtube.apk revanced-magisk-template
+find . -type f -name "revanced-root.apk" -exec cp {} revanced-magisk-template/ \;
+# cp build/revanced-root-signed.apk 
+# cp com.google.android.youtube.apk revanced-magisk-template
 
 cd revanced-magisk-template
 
