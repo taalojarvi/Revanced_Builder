@@ -38,7 +38,7 @@ jobs:
           title: "Release ${{ env.date_now }}"
           files: |
             build/*.apk
-            build/*.zip
+            ReVanced-root-MagiskModule.zip
             vanced-microG.apk
 
       - name: Send notification to Telegram
