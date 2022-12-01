@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git clone https://github.com/CDzungx/revanced-magisk-template.git -b main || exit 1
+git clone https://github.com/shimpact003/revanced-magisk-template -b main || exit 1
 
 find . -type f -name "revanced-root.apk" -exec cp {} revanced-magisk-template/ \;
 # cp build/revanced-root-signed.apk 
